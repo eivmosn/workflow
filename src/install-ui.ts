@@ -25,7 +25,7 @@ export function formatTitle(title: string): string {
  * @returns 彩色问题文案。
  */
 export function formatQuestion(message: string): string {
-  return ansis.bold.yellow(message)
+  return ansis.bold.green(message)
 }
 
 /**
@@ -47,7 +47,7 @@ export function formatBackupResults(backups: { name: string, path: string }[]): 
  */
 export function createInstallModeOptions(): SelectOption[] {
   return [
-    { value: 'all', label: ansis.green('安装全部'), hint: ansis.dim('AGENTS.md + agents + skills') },
+    { value: 'all', label: ansis.cyan('安装全部'), hint: ansis.dim('AGENTS.md + agents + skills') },
     { value: 'skills', label: ansis.cyan('仅安装 skills') },
     { value: 'agents', label: ansis.cyan('仅安装 agents') },
     { value: 'agents-md', label: ansis.cyan('仅安装 AGENTS.md') },
